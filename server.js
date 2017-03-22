@@ -9,7 +9,6 @@ var googleSearch = new GoogleSearch({
   key: 'AIzaSyAaJComghzG4VESGerb-1MtivKSEz701sg',
   cx: '005229907790370133154:o3q1t7yjhee'
 });
-
  
 /*googleSearch.build({
   q: "galatasaray",

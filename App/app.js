@@ -10,10 +10,11 @@ module.exports = function(app, googleSearch, db) {
         var specific_page = -1;
         console.log("Query is:", req.params.query)
         // Record the search
-        var record = {'search_term':req.params.query, 'timestamp': new Date().toISOString()};
-        collection.insertOne(record);
-        
-        
+        if (req.params.query !== 'favicon.ico'){
+            var record = {'search_term':req.params.query, 'timestamp': new Date().toISOString()};
+            collection.insertOne(record);
+        }
+
         //Check if url is valid via using valid url package using url-valid package
         if(typeof req.query.offset !== "undefined"){ //Check if there is a specific page inquiry or a total serach
             if(isFinite(parseInt(req.query.offset)) && parseInt(req.query.offset) !== -1){ //Check if the entered value is valid
@@ -44,6 +45,7 @@ module.exports = function(app, googleSearch, db) {
                      for (var i = 0; i < response.items.length; i++) {
                         //console.log("Iteration count:", i,response.items[i].pagemap.cse_image, response.items[i].pagemap.cse_thumbnail );
                         if(typeof response.items[i].pagemap.cse_image !== "undefined" && typeof response.items[i].pagemap.cse_thumbnail !== "undefined" ){     
+                             
                              if(response.items[i].pagemap.cse_image.constructor === Array && response.items[i].pagemap.cse_thumbnail.constructor === Array ){// If the relevant image is properly documented, report it
                                 result.push({"img-url":response.items[i].pagemap.cse_image[0].src, "snippet":response.items[i].snippet,
                                           "title":response.items[i].title,'thumbnail': response.items[i].pagemap.cse_thumbnail[0].src});
