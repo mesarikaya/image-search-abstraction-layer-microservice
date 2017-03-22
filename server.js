@@ -9,19 +9,6 @@ var googleSearch = new GoogleSearch({
   key: 'AIzaSyAaJComghzG4VESGerb-1MtivKSEz701sg',
   cx: '005229907790370133154:o3q1t7yjhee'
 });
- 
-/*googleSearch.build({
-  q: "galatasaray",
-  start: 1,
-  num: 10, // Number of search results to return between 1 and 10, inclusive 
-}, function(error, response) {
-  if(error){
-    throw error;
-  }
-  console.log(response);
-});*/
-
-// mlab connection link: mongodb://<dbuser>:<dbpassword>@ds137340.mlab.com:37340/image_search
 
 // Connection URL
 var url = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/image_search';
