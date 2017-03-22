@@ -33,7 +33,7 @@ mongo.MongoClient.connect(url, function(err,db){
     //call the app
     api(app, googleSearch, db);
     
-    var port = process.env.PORT || 8000;
+    var port = process.env.PORT || 5000;
     
     app.listen(port, function() {
         console.log('Node.js listening on port ' + port);
