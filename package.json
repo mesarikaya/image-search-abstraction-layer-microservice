@@ -1,0 +1,31 @@
+{
+  "name": "imagesearch",
+  "version": "1.0.0",
+  "description": "image search abstraction layer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mesarikaya/image-search-abstraction-layer-microservice.git"
+  },
+  "keywords": [
+    "image",
+    "search",
+    "microservice"
+  ],
+  "author": "Ergin Sarikaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mesarikaya/image-search-abstraction-layer-microservice/issues"
+  },
+  "homepage": "https://github.com/mesarikaya/image-search-abstraction-layer-microservice#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "google-images": "^2.1.0",
+    "google-search": "0.0.5",
+    "mongodb": "^2.2.25"
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Image Search Abstraction Layer microservice API</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+        <div class="container">
+            <h1 class="header">
+                API: Image Search Abstraction Layer microservice
+            </h1>
+
+            <blockquote>
+                This microservice makes a Google search based for the user and also enables listing the latest searches in the database.
+                Below is how to use this service:
+                <ul>1-) For new search, enter the web link to the explorer address.
+                    <ul><h4>Example:</h4>
+                        <code>https://image-search-microservices.herokuapp.com/search/cats</code>
+                        <h4>Example output:</h4>
+                        <code>
+                            {{"img-url":"https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg","snippet":"Dec 30, 2013 ... Funny Cats Compilation ...",
+                            "thumbnail":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq22iXWNm3ZKR58XXOkyriSN2BnLJhLdymzuY10LjtAR6U91z7U1IRVY4"}, ...}
+                        </code>
+                    </ul>
+                </ul>
+                <ul>2-) For searching the database for the latest entries:
+                    <ul><h4>Example:</h4>
+                        <code>https://image-search-microservices.herokuapp.com/list/latestsearches</code><br>
+                        <h4> Example output:</h4>
+                        <code>
+                            [{"_id":"58d269ec3e76b821835a74a4","search_term":"cats","timestamp":"2017-03-22T12:11:24.521Z"},
+                             {"_id":"58d2696e3e76b821835a74a3","search_term":"cats","timestamp":"2017-03-22T12:09:18.417Z"},
+                             {"_id":"58d268f03e76b821835a74a2","search_term":"test","timestamp":"2017-03-22T12:07:12.099Z"}]
+                        </code>
+                    </ul>
+                </ul>
+            </blockquote>
+        </div>
+</body>
+</html>
