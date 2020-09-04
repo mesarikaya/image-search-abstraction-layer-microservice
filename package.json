@@ -27,6 +27,6 @@
     "google-images": "^2.1.0",
     "google-search": "0.0.5",
     "node": "0.0.0",
-    "mongodb": "^2.2.25"
+    "mongodb": "^3.6.1"
   }
 }
